@@ -23,14 +23,23 @@ namespace voyage_pro_report_service
 
         public override byte[] GetData(string url)
         {
-            var (reportName, query) = ParseUrl(url);
-            var binder = FindBinder(reportName)
-                ?? throw new InvalidOperationException($"No report binder registered for '{reportName}'.");
+            try
+            {
+                var (reportName, query) = ParseUrl(url);
+                var binder = FindBinder(reportName)
+                    ?? throw new InvalidOperationException($"No report binder registered for '{reportName}'.");
 
-            using var report = binder.CreateReport(query);
-            using var ms = new MemoryStream();
-            report.SaveLayoutToXml(ms);
-            return ms.ToArray();
+                using var report = binder.CreateReport(query);
+                using var ms = new MemoryStream();
+                report.SaveLayoutToXml(ms);
+                return ms.ToArray();
+            }
+            catch (Exception ex)
+            {
+                // Replace with your actual logger (ILogger<ReportStorage> via constructor injection)
+                Console.WriteLine($"[ReportStorage.GetData] {ex}");
+                throw;
+            }
         }
 
         private IReportDataBinder? FindBinder(string reportName) =>

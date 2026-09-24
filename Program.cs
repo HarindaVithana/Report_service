@@ -1,6 +1,7 @@
 using DevExpress.AspNetCore;
 using DevExpress.AspNetCore.Reporting;
 using DevExpress.XtraReports.Web.Extensions;
+using DevExpress.XtraReports.Web.WebDocumentViewer;
 using voyage_pro_report_service;
 using voyage_pro_report_service.Extensions;
 
@@ -20,8 +21,11 @@ builder.Services.AddCors(o => o.AddPolicy("Angular", p =>
 
 builder.Services.AddDevExpressControls();
 builder.Services.AddScoped<ReportStorageWebExtension, ReportStorage>();
+builder.Services.AddScoped<IWebDocumentViewerReportResolver, ReportResolver>();
 builder.Services.ConfigureReportingServices(configurator =>
 {
+    if (builder.Environment.IsDevelopment())
+        configurator.UseDevelopmentMode();
     configurator.ConfigureWebDocumentViewer(viewerConfigurator =>
     {
         viewerConfigurator.UseCachedReportSourceBuilder();

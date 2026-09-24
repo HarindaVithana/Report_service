@@ -28,7 +28,7 @@ namespace voyage_pro_report_service.Repositories
                 FROM QM.QuotationMainHD A
                 INNER JOIN QM.QuotationShpHD B ON A.intQuoID = B.intQuoID
                 WHERE A.intQuoID = @QuoId AND A.bitActive = 1
-                  AND intUserCompanyID = @CompanyId AND intUserAgencyID = @AgencyId";
+                  --AND intUserCompanyID = @CompanyId AND intUserAgencyID = @AgencyId";
 
             var parameters = new { QuoId = quoId, CompanyId = companyId, AgencyId = agencyId };
 
