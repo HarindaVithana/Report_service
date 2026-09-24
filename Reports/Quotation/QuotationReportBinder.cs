@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraReports.UI;
+using System.Collections;
 using System.Collections.Specialized;
 using voyage_pro_report_service.DTOs;
 using voyage_pro_report_service.Interfaces.IServices;
@@ -22,9 +23,10 @@ namespace voyage_pro_report_service.Reports.Quotation
             var quoId = int.Parse(query["id"]!);
             var companyId = int.Parse(query["companyID"]!);
             var agencyId = int.Parse(query["agencyID"]!);
+            var userId = int.Parse(query["userID"]!); // User ID
 
             var data = _reportService
-                .GetQuotationReportDataAsync(quoId, companyId, agencyId)
+                .GetQuotationReportDataAsync(quoId, companyId, agencyId, userId)
                 .GetAwaiter()
                 .GetResult();
 
@@ -34,20 +36,31 @@ namespace voyage_pro_report_service.Reports.Quotation
             report.DataSource = new List<QuotationHD> { data.Header };
             report.DataMember = "";
 
-            BindSubreport(report, "xrSubreportContainers", data.Containers);
-            BindSubreport(report, "xrSubreportRevenue", data.RevenueItems);
-            BindSubreport(report, "xrSubreportCost", data.CostItems);
+            BindSubreport(report, "rptQuotationContTeu", data.Containers);
+            BindSubreport(report, "rptQuotationRevenue", data.RevenueItems);
+            BindSubreport(report, "rptQuotationCost", data.CostItems);
 
             return report;
         }
 
-        private static void BindSubreport(XtraReport report, string controlName, object dataSource)
+        private static void BindSubreport(XtraReport report, string controlName, IEnumerable dataSource)
         {
-            if (report.FindControl(controlName, true) is XRSubreport sub
-                && sub.ReportSource is XtraReport subReport)
+            var control = report.FindControl(controlName, true);
+            if (control is not XRSubreport sub)
             {
-                subReport.DataSource = dataSource;
+                Console.WriteLine($"[BindSubreport] Control '{controlName}' not found or not an XRSubreport.");
+                return;
             }
+            if (sub.ReportSource is not XtraReport subReport)
+            {
+                Console.WriteLine($"[BindSubreport] '{controlName}' has no ReportSource assigned.");
+                return;
+            }
+
+            var hasData = dataSource?.Cast<object>().Any() == true;
+
+            sub.Visible = hasData;
+            subReport.DataSource = hasData ? dataSource : null;
         }
     }
 }

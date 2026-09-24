@@ -3,6 +3,7 @@
     public class ContainerTEU
     {
         public string? varContainerSize { get; set; }
+        public string? varUOMCode { get; set; }
         public string? varContainerType { get; set; }
         public int intQuantity { get; set; }
         public int intNoOfTEUs { get; set; }

@@ -14,10 +14,20 @@
         public string? varPOD { get; set; }
         public string? varPOOR { get; set; }
         public string? varPOfDelivery { get; set; }
+        public string? varServiceCode { get; set; }
         public string? varShipmentType { get; set; }
         public string? varCommodityCode { get; set; }
         public string? varKindOfPkg { get; set; }
         public string? varGoodsDescription { get; set; }
+        public string? varHDCurrency { get; set; }
         public int intPackageType { get; set; }
+        public string? varCustomerName { get; set; }
+        public string? varCustomerAddress { get; set; }
+        public string? varAgentName { get; set; }
+        public string? varAgentAddress { get; set; }
+        public decimal totGrossWeight { get; set; }
+        public decimal totCBM { get; set; }
+        public string? ReportUserName { get; set; } = null!;
+
     }
 }

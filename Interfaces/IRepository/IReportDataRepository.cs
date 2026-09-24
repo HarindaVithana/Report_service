@@ -8,5 +8,6 @@ namespace voyage_pro_report_service.Interfaces.IRepository
         Task<List<ContainerTEU>?> GetContainerTEUAsync(int quoId, int companyId, int agencyId);
         Task<List<CostItm>?> GetCostItmAsync(int quoId, int companyId, int agencyId);
         Task<List<RevenueItm>?> GetRevenueItmAsync(int quoId, int companyId, int agencyId);
+        Task<string?> GetReportUserNameAsync(int intUserID);
     }
 }

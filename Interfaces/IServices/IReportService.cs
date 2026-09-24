@@ -4,6 +4,6 @@ namespace voyage_pro_report_service.Interfaces.IServices
 {
     public interface IReportService
     {
-        Task<QuotationReportData?> GetQuotationReportDataAsync(int quoId, int companyId, int agencyId);
+        Task<QuotationReportData?> GetQuotationReportDataAsync(int quoId, int companyId, int agencyId, int userId);
     }
 }

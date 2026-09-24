@@ -8,7 +8,7 @@ namespace voyage_pro_report_service.Services
     {
         private readonly IReportDataRepository _reportDataRepository = reportDataRepository;
 
-        public async Task<QuotationReportData?> GetQuotationReportDataAsync(int quoId, int companyId, int agencyId)
+        public async Task<QuotationReportData?> GetQuotationReportDataAsync(int quoId, int companyId, int agencyId, int userId)
         {
             QuotationReportData quoReportDT = new QuotationReportData();
 
@@ -19,6 +19,7 @@ namespace voyage_pro_report_service.Services
                 quoReportDT.Containers = await _reportDataRepository.GetContainerTEUAsync(quoId, companyId, agencyId);
                 quoReportDT.RevenueItems = await _reportDataRepository.GetRevenueItmAsync(quoId, companyId, agencyId);
                 quoReportDT.CostItems = await _reportDataRepository.GetCostItmAsync(quoId, companyId, agencyId);
+                quoReportDT.Header.ReportUserName = await _reportDataRepository.GetReportUserNameAsync(userId);
             }
 
             return quoReportDT;

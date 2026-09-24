@@ -8,6 +8,10 @@
         public decimal decSellCurAmount { get; set; }
         public decimal decTaxPercentage { get; set; }
         public decimal decTaxAmount { get; set; }
+        public string? varRE { get; set; } = null;
         public string? varRemarks { get; set; } = null;
+        public int intAgentInvoicing { get; set; }
+        public decimal decExchangeRate { get; set; }
+
     }
 }
