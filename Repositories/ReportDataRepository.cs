@@ -59,9 +59,10 @@ namespace voyage_pro_report_service.Repositories
                                             NULLIF(OgAgn.varOrgCountry, '')
                                         ) AS varAgentAddress,
                                         SUM(C.numGrossWeight) AS totGrossWeight,
-                                        SUM(C.numCBM) AS totCBM
+                                        SUM(C.numCBM) AS totCBM,
+                                        varShipmentCondition,
+                                        QS.varStatusName                  
                                     FROM QM.QuotationMainHD A
-
                                     INNER JOIN QM.QuotationShpHD B
                                         ON A.intQuoID = B.intQuoID
                                     INNER JOIN QM.QuotationAllocatedCntrs C
@@ -70,6 +71,8 @@ namespace voyage_pro_report_service.Repositories
                                         ON A.intOrgID = OgCus.intOrgID
                                     LEFT JOIN VP.GLMFOrganization OgAgn
                                         ON A.intAgentID = OgAgn.intOrgID
+                                    LEFT JOIN [QM].[CFQuotationStatus] QS
+                                        ON A.intStatusID = QS.intQUOStatusID
                                     WHERE A.intQuoID = @QuoId
                                       AND A.bitActive = 1
                                     GROUP BY
@@ -104,7 +107,9 @@ namespace voyage_pro_report_service.Repositories
                                         OgAgn.varOrgAddr3,
                                         OgAgn.varOrgAddr4,
                                         OgAgn.varOrgCity,
-                                        OgAgn.varOrgCountry;";
+                                        OgAgn.varOrgCountry,
+                                        varShipmentCondition,
+                                        QS.varStatusName";
 
             var parameters = new { QuoId = quoId, CompanyId = companyId, AgencyId = agencyId };
 

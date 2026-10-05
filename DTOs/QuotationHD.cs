@@ -27,7 +27,8 @@
         public string? varAgentAddress { get; set; }
         public decimal totGrossWeight { get; set; }
         public decimal totCBM { get; set; }
+        public string? varShipmentCondition { get; set; }
         public string? ReportUserName { get; set; } = null!;
-
+        public string? varStatusName { get; set; } = null!;
     }
 }

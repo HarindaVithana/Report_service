@@ -22,8 +22,8 @@ namespace voyage_pro_report_service.Reports.Quotation
         {
             var quoId = int.Parse(query["id"]!);
             var companyId = int.Parse(query["companyID"]!);
-            var agencyId = int.Parse(query["agencyID"]!);
-            var userId = int.Parse(query["userID"]!); // User ID
+            var agencyId = 0; //int.Parse(query["agencyID"]!);
+            var userId = 0; //int.Parse(query["userID"]!); // User ID
 
             var data = _reportService
                 .GetQuotationReportDataAsync(quoId, companyId, agencyId, userId)
