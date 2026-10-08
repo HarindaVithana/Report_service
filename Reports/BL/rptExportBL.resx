@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="xrTableCell53.Text" xml:space="preserve">
+    <value>RECEIVED from the Shipper in apparent good order and condition unless otherwise indicated herein, the Container(s) of package(s) said to contain the Goods herein mentioned, to be carried subject to all the terms and conditions provided for on the face and back of this Bill of Lading, from the Place of Receipt or Port of Loading to the Port of Discharge or Place of Delivery shown herein and there to be delivered. Once original Bill of Lading, duly endorsed, must be surrendered, by Merchant to Carrier in exchange for Goods and delivery order. No Servant, agent or Subcontractor of the Carrier shall have the power to waive or vary any terms of this Bill of Lading unless such waiver or variation is specifically authorized or approved in writing by the Carrier.
+
+IN ACCEPTING THIS BILL OF LADING, Merchant agrees to be bound by all the stipulations, exceptions, terms and conditions on the face and reverse hereof, and the terms and conditions contained in Carrier's applicable Tariff, whether written, typed, stamped, printed or published on the website of the Carrier, as fully as if signed by Merchant, any local custom or privilege to the contrary notwithstanding, and agrees that all representations, agreement or freight engagements for and in connection with the Carriage of the Goods are superseded by this Bill of Lading.</value>
+  </data>
+  <data name="xrTableCell54.ExpressionBindings" xml:space="preserve">
+    <value>Iif(IsNullOrEmpty([ContainerCountSummary]),
+    ToStr([ContainerCount]) + ' x ' + Iif(IsNullOrEmpty([FirstIsoCode]), '', [FirstIsoCode]),
+    [ContainerCountSummary] + Iif(IsNullOrEmpty([ContainerCountWord]), '', ' (' + [ContainerCountWord] + ')'))</value>
+  </data>
+  <data name="xrTableCell72.Text" xml:space="preserve">
+    <value>IN WITNESS WHEREOF, the undersigned, on behalf of the Carrier, Advantis Sabang Raya Lines Pte Ltd has signed the number of Bill(s) of Lading stated herein, all of this tenor and date, one of which being accomplished, the others to stand void.</value>
+  </data>
+  <data name="xrTableCell19.ExpressionBindings" xml:space="preserve">
+    <value>Iif(IsNullOrEmpty([MarkAndNos]), '', [MarkAndNos]) +
+Iif(IsNullOrEmpty([MarkAndNos2]), '', [MarkAndNos2]) +
+Iif(IsNullOrEmpty([MarkAndNos]), '', '\n') +
+Iif(IsNullOrEmpty([ContainerDetails]),
+    Iif(IsNullOrEmpty([ContainerNos]), '', [ContainerNos]),
+    [ContainerDetails])</value>
+  </data>
+  <data name="xrTableCell20.ExpressionBindings" xml:space="preserve">
+    <value>Iif(IsNull([TotalPackages]) Or [TotalPackages] = 0, '',
+    ToStr([TotalPackages]) + ' ' + Iif(IsNull([PackageUom]), '', [PackageUom]) + '\n') +
+Iif(IsNull([KindOfPkgs]), '', [KindOfPkgs]) +
+Iif(IsNullOrEmpty([KindOfPkgs2]), '', [KindOfPkgs2]) +
+Iif(IsNullOrEmpty([ShipmentLoadDesc]), '', '\n\n' + [ShipmentLoadDesc]) +
+Iif(IsNull([TotalNetWeight]) Or [TotalNetWeight] = 0, '',
+    '\nNET WEIGHT: ' + FormatString('{0:#,##0.000}', [TotalNetWeight]) + ' KGS')</value>
+  </data>
+  <data name="xrLabel10.ExpressionBindings" xml:space="preserve">
+    <value>Upper(
+  Iif(IsNullOrEmpty([AgentName]), '', [AgentName]) +
+  Iif(IsNullOrEmpty([AgentAdd1]), '', '\n' + [AgentAdd1]) +
+  Iif(IsNullOrEmpty([AgentAdd2]), '', '\n' + [AgentAdd2]) +
+  Iif(IsNullOrEmpty([AgentAdd3]), '', '\n' + [AgentAdd3]) +
+  Iif(IsNullOrEmpty([AgentAdd4]), '', '\n' + [AgentAdd4]) +
+  Iif(IsNullOrEmpty([AgentCity]), '', '\n' + [AgentCity])
+) +
+Iif(IsNullOrEmpty([AgentPhone]), '', '\n' + 'Tel: ' + [AgentPhone]) +
+Iif(IsNullOrEmpty([AgentEmail]), '', '\n' + 'Email: ' + [AgentEmail])</value>
+  </data>
+  <data name="xrLabel8.ExpressionBindings" xml:space="preserve">
+    <value>Upper(
+  Iif(IsNullOrEmpty([NpName]), '', [NpName]) +
+  Iif(IsNullOrEmpty([NpAdd1]), '', '\n' + [NpAdd1]) +
+  Iif(IsNullOrEmpty([NpAdd2]), '', '\n' + [NpAdd2]) +
+  Iif(IsNullOrEmpty([NpAdd3]), '', '\n' + [NpAdd3]) +
+  Iif(IsNullOrEmpty([NpAdd4]), '', '\n' + [NpAdd4]) +
+  Iif(IsNullOrEmpty([NpCity]), '', '\n' + [NpCity]) +
+  Iif(IsNullOrEmpty([NpCountry]), '', '\n' + [NpCountry])
+)</value>
+  </data>
+  <data name="xrLabel5.ExpressionBindings" xml:space="preserve">
+    <value>Upper(
+  Iif(IsNullOrEmpty([ConsineeName]), '', [ConsineeName]) +
+  Iif(IsNullOrEmpty([ConsineeAdd1]), '', '\n' + [ConsineeAdd1]) +
+  Iif(IsNullOrEmpty([ConsineeAdd2]), '', '\n' + [ConsineeAdd2]) +
+  Iif(IsNullOrEmpty([ConsineeAdd3]), '', '\n' + [ConsineeAdd3]) +
+  Iif(IsNullOrEmpty([ConsineeAdd4]), '', '\n' + [ConsineeAdd4]) +
+  Iif(IsNullOrEmpty([ConsineeCity]), '', '\n' + [ConsineeCity]) +
+  Iif(IsNullOrEmpty([ConsineeCountry]), '', '\n' + [ConsineeCountry])
+)</value>
+  </data>
+  <data name="xrLabel3.ExpressionBindings" xml:space="preserve">
+    <value>Upper(
+  Iif(IsNullOrEmpty([ShName]), '', [ShName]) +
+  Iif(IsNullOrEmpty([ShAdd1]), '', '\n' + [ShAdd1]) +
+  Iif(IsNullOrEmpty([ShAdd2]), '', '\n' + [ShAdd2]) +
+  Iif(IsNullOrEmpty([ShAdd3]), '', '\n' + [ShAdd3]) +
+  Iif(IsNullOrEmpty([ShAdd4]), '', '\n' + [ShAdd4]) +
+  Iif(IsNullOrEmpty([ShCity]), '', '\n' + [ShCity]) +
+  Iif(IsNullOrEmpty([ShCountry]), '', '\n' + [ShCountry])
+)</value>
+  </data>
+</root>

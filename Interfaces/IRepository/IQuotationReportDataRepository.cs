@@ -2,7 +2,7 @@
 
 namespace voyage_pro_report_service.Interfaces.IRepository
 {
-    public interface IReportDataRepository
+    public interface IQuotationReportDataRepository
     {
         Task<QuotationHD?> GetQuotationHDAsync(int quoId, int companyId, int agencyId);
         Task<List<ContainerTEU>?> GetContainerTEUAsync(int quoId, int companyId, int agencyId);

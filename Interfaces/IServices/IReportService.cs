@@ -1,9 +1,12 @@
-﻿using voyage_pro_report_service.Models;
+﻿using voyage_pro_report_service.DTOs;
+using voyage_pro_report_service.Models;
 
 namespace voyage_pro_report_service.Interfaces.IServices
 {
     public interface IReportService
     {
         Task<QuotationReportData?> GetQuotationReportDataAsync(int quoId, int companyId, int agencyId, int userId);
+        Task<BLDetailData?> GetBlReportDataAsync(int blId, int companyId, int agencyId, int userId);
+        Task<IEnumerable<BLContainerResult>> GetBLContainersAsync(int blId, int companyId, int agencyId);
     }
 }

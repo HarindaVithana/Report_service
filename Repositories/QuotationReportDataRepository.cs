@@ -6,11 +6,11 @@ using voyage_pro_report_service.Models;
 
 namespace voyage_pro_report_service.Repositories
 {
-    public class ReportDataRepository: IReportDataRepository
+    public class QuotationReportDataRepository: IQuotationReportDataRepository
     {
         private readonly string _connectionString;
 
-        public ReportDataRepository(IConfiguration configuration)
+        public QuotationReportDataRepository(IConfiguration configuration)
         {
             _connectionString = configuration.GetConnectionString("DB")
                 ?? throw new InvalidOperationException("Connection not found.");
