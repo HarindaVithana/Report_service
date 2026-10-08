@@ -34,10 +34,20 @@ builder.Services.ConfigureReportingServices(configurator =>
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("Angular", policy =>
-        policy.WithOrigins("http://localhost:4200")
-              .AllowAnyHeader()
-              .AllowAnyMethod());
+    options.AddPolicy(
+        "AllowAngularClient",
+        policy =>
+        {
+            var allowedOrigins =
+                builder.Configuration.GetSection("Cors:AllowedOrigins").Get<string[]>()
+                ?? Array.Empty<string>();
+            policy
+                .WithOrigins(allowedOrigins) // Allow your Angular app
+                .AllowAnyMethod() // Allow GET, POST, PUT, DELETE, etc.
+                .AllowAnyHeader() // Allow any headers
+                .AllowCredentials(); // Allow credentials if needed
+        }
+    );
 });
 
 var app = builder.Build();
